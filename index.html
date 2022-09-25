@@ -130,7 +130,6 @@
             font-weight: 400;
         }
 
-        .project__id {}
 
         .project__item {
             display: flex;
@@ -331,8 +330,6 @@
             padding-left: 20px;
         }
 
-        .persons__info-name {}
-
         .persons__info-job {
             color: #a8acb1;
             font-size: .6rem;
@@ -398,13 +395,6 @@
             width: 50px;
             border-radius: 50%;
         }
-
-
-        .chat_individ-info {}
-
-        .chat__individ-title {}
-
-        .chat__individ-status {}
 
         .chat__individ-left {
             display: flex;
@@ -544,117 +534,134 @@
         }
 
         .chat__letter-right {
-            position: absolute;
-            right: 70px;
+            margin-top: 10px;
+            margin-left: calc(100vw - 740px);
             border-radius: 15px 15px 0 15px;
+            background: #fff;
         }
 
-        .chat__letter--white {
-            background: #fff;
+        .chat__letter-left {
+            background: #eceef0;
+            border-radius: 15px 15px 15px 0;
+            margin-top: 10px;
+        }
+
+        .chat__letter--long {
+            width: 200px;
+            margin-left: calc(100vw - 840px);
+        }
+
+        .chat__letter-left--long {
+            width: 200px;
+        }
+        .chat__file {
+            color: #5a6dab;
+            font-size: .7rem;
         }
     </style>
 </head>
 
 <body>
-    <aside class="sidebar">
-        <div class="logo">
-            <i class="las la-cube logo__icon"></i>
-            <h4 class="logo__text">Shark</h4>
-        </div>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <i class="las la-layer-group nav__icon"></i>
-                    <h6 class="nav__item-id">
-                        Dashboard
-                    </h6>
+    <main class="wraper">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="las la-cube logo__icon"></i>
+                <h4 class="logo__text">Shark</h4>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <i class="las la-layer-group nav__icon"></i>
+                        <h6 class="nav__item-id">
+                            Dashboard
+                        </h6>
 
-                </li>
-                <li class="nav__item">
-                    <i class="las la-chart-bar nav__icon"></i>
-                    <h6 class="nav__item-id">
-                        Statistic
-                    </h6>
+                    </li>
+                    <li class="nav__item">
+                        <i class="las la-chart-bar nav__icon"></i>
+                        <h6 class="nav__item-id">
+                            Statistic
+                        </h6>
 
-                </li>
-                <li class="nav__item">
-                    <i class="las la-comment-alt nav__icon"></i>
-                    <h6 class="nav__item-id">
-                        Support
-                    </h6>
+                    </li>
+                    <li class="nav__item">
+                        <i class="las la-comment-alt nav__icon"></i>
+                        <h6 class="nav__item-id">
+                            Support
+                        </h6>
 
-                </li>
-                <li class="nav__item">
-                    <i class="las la-clipboard nav__icon"></i>
-                    <h6 class="nav__item-id">
-                        Inbox
-                    </h6>
+                    </li>
+                    <li class="nav__item">
+                        <i class="las la-clipboard nav__icon"></i>
+                        <h6 class="nav__item-id">
+                            Inbox
+                        </h6>
 
-                </li>
-                <li class="nav__item">
-                    <i class="las la-rocket nav__icon"></i>
-                    <h6 class="nav__item-id">
-                        Goals
-                    </h6>
+                    </li>
+                    <li class="nav__item">
+                        <i class="las la-rocket nav__icon"></i>
+                        <h6 class="nav__item-id">
+                            Goals
+                        </h6>
 
-                </li>
-                <li class="nav__item">
-                    <i class="las la-link nav__icon"></i>
-                    <h6 class="nav__item-id">
-                        Links
-                    </h6>
+                    </li>
+                    <li class="nav__item">
+                        <i class="las la-link nav__icon"></i>
+                        <h6 class="nav__item-id">
+                            Links
+                        </h6>
 
-                </li>
-            </ul>
+                    </li>
+                </ul>
 
-        </nav>
-        <div class="project">
-            <h6 class="project__title">PROJECT</h6>
-            <div class="project__id">
-                <div class="project__item">
-                    <div class="project__item-id">
-                        <span class="project__item--oranje"></span>
-                        <span class="project__item-name">
-                            <h5 class="project__item-tilte">Calipso</h5>
-                        </span>
+            </nav>
+            <div class="project">
+                <h6 class="project__title">PROJECT</h6>
+                <div class="project__id">
+                    <div class="project__item">
+                        <div class="project__item-id">
+                            <span class="project__item--oranje"></span>
+                            <span class="project__item-name">
+                                <h5 class="project__item-tilte">Calipso</h5>
+                            </span>
+                        </div>
+                        <div class="project__item-ball">+4</div>
                     </div>
-                    <div class="project__item-ball">+4</div>
-                </div>
-                <div class="project__item">
-                    <div class="project__item-id">
-                        <span class="project__item--blue"></span>
-                        <span class="project__item-name">
-                            <h5 class="project__item-tilte">BWS bank</h5>
-                        </span>
+                    <div class="project__item">
+                        <div class="project__item-id">
+                            <span class="project__item--blue"></span>
+                            <span class="project__item-name">
+                                <h5 class="project__item-tilte">BWS bank</h5>
+                            </span>
+                        </div>
+                        <div class="project__item-ball">+5</div>
                     </div>
-                    <div class="project__item-ball">+5</div>
-                </div>
-                <div class="project__item">
-                    <div class="project__item-id">
-                        <span class="project__item--purple"></span>
-                        <span class="project__item-name">
-                            <h5 class="project__item-tilte">Unicorn app</h5>
-                        </span>
+                    <div class="project__item">
+                        <div class="project__item-id">
+                            <span class="project__item--purple"></span>
+                            <span class="project__item-name">
+                                <h5 class="project__item-tilte">Unicorn app</h5>
+                            </span>
+                        </div>
+                        <div class="project__item-ball">+1</div>
                     </div>
-                    <div class="project__item-ball">+1</div>
-                </div>
-                <div class="project__item">
-                    <div class="project__item-id">
-                        <span class="project__item--green"></span>
-                        <span class="project__item-name">
-                            <h5 class="project__item-tilte">Salt</h5>
-                        </span>
+                    <div class="project__item">
+                        <div class="project__item-id">
+                            <span class="project__item--green"></span>
+                            <span class="project__item-name">
+                                <h5 class="project__item-tilte">Salt</h5>
+                            </span>
+                        </div>
+                        <span class="project__item-ball">+3</span>
                     </div>
-                    <span class="project__item-ball">+3</span>
                 </div>
             </div>
-        </div>
-        <div class="button">
-            <button class="button__item">Show more</button>
-        </div>
+            <div class="button">
+                <button class="button__item">Show more</button>
+            </div>
 
-    </aside>
-    <main>
+        </aside>
+
         <div class="inbox">
             <div class="inbox--fixed">
                 <div class="inbox__title">
@@ -813,8 +820,27 @@
             <div class="chat__message">
                 <h5 class="chat__date">July 29,Tuesday</h5>
                 <h6 class="chat__time chat__right">12:25</h6>
-                <h5 class="chat__letter chat__letter-right chat__letter--white">Hello!</h5>
-                <h5 class="chat__letter chat__letter-right chat__letter--white">How is your part of project?</h5>
+                <h5 class="chat__letter chat__letter-right">Hello!</h5>
+                <h5 class="chat__letter chat__letter-right chat__letter--long">How is your part of
+                    project?</h5>
+                <h6 class="chat__time chat__right">viewed at</h6>
+                <h6 class="chat__time">12:28</h6>
+                <h5 class="chat__letter chat__letter-left">Hi!</h5>
+                <h5 class="chat__letter chat__letter-left chat__letter-left--long">Every thing is ok! It ready now!</h5>
+                <h6 class="chat__time chat__right">12:29</h6>
+                <h5 class="chat__letter chat__letter-right chat__letter--long">Okey, thank you for the speed.</h5>
+                <h6 class="chat__time chat__right">viewed at</h6>
+                <h5 class="chat__letter chat__letter-left">Catch</h5>
+                <h5 class="chat__letter chat__letter-left chat__letter-send">
+                    <img src="./image/icons8-microsoft-word.svg" alt="">
+                    <div class="chat__letter-file">
+                        <h6 class="chat__file">Brief.doc</h6>
+                        <h6 class="chat__weight">148 KB</h6>
+
+                    </div>
+
+
+                </h5>
 
             </div>
             <div class="chat__writefield">
