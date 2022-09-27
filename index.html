@@ -7,606 +7,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Shark project</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-        html,
-        body,
-        main,
-        aside,
-        .inbox,
-        .chat,
-        .sidepanel {
-            height: 100%;
-        }
-
-        aside {
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 20px 0 0 40px;
-            background: #f3f5f7;
-            width: 250px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo__icon {
-            font-size: 2.5rem;
-            color: #4a6ada;
-        }
-
-        .logo__text {
-            margin-left: 10px;
-        }
-
-        .nav {
-            height: 60%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-        }
-
-        .nav__list {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            height: 100%;
-            margin-top: 32px;
-            list-style: none;
-        }
-
-        .nav__icon {
-            font-size: 1.2rem;
-            color: #7a7f89;
-            padding-left: 5px;
-        }
-
-        .nav__icon:hover {
-            color: #4c6bde;
-        }
-
-        .nav__item:hover {
-            color: #4c6bde;
-            background: linear-gradient(90deg, white, #f6f8fa);
-            border-right: 2px solid #fb663f;
-
-        }
-
-
-        .nav__item {
-            display: flex;
-            align-items: center;
-            border-radius: 10px 0 0 10px;
-            height: calc(100% / 6);
-        }
-
-        .nav__item-id {
-            margin-left: 15px;
-        }
-
-
-        main {
-            position: absolute;
-            top: 0;
-            left: 250px;
-            width: calc(100% - 250px);
-            display: flex;
-        }
-
-        .inbox {
-            border-right: 1px solid #f2f2f4;
-            /* вынести в переменную */
-            width: 300px;
-
-        }
-
-        .project {
-            height: 25%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-        }
-
-        .project__title {
-            color: #b6b8be;
-            font-size: .6rem;
-            font-weight: 400;
-        }
-
-
-        .project__item {
-            display: flex;
-            align-items: center;
-            width: 80%;
-            justify-content: space-between;
-            margin-bottom: 5px;
-        }
-
-        .project__item-id {
-            display: flex;
-            width: 80px;
-            justify-content: space-evenly;
-        }
-
-        .project__item--oranje,
-        .project__item--blue,
-        .project__item--purple,
-        .project__item--green {
-            height: 15px;
-            width: 15px;
-            border-radius: 6px;
-        }
-
-        .project__item--oranje {
-            border: 2px solid #c77b67;
-        }
-
-        .project__item--blue {
-            border: 2px solid #6284bb;
-        }
-
-        .project__item--purple {
-            border: 2px solid #7356c2;
-        }
-
-        .project__item--green {
-            border: 2px solid #a4c9b5;
-        }
-
-        .project__item-name {
-            margin-left: 4px;
-            width: 62px;
-
-        }
-
-        .project__item-tilte {
-            font-size: .7rem;
-            color: #3c3e40;
-
-        }
-
-        .project__item-ball {
-            height: 25px;
-            width: 25px;
-            background: #e7e9ef;
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #9c9faa;
-            font-size: .8rem;
-        }
-
-        .button__item {
-            height: 35px;
-            width: 160px;
-            border-radius: 11px;
-            border: 1px solid #e7e9ed;
-            background: #f3f5f7;
-        }
-
-        .inbox {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .inbox--fixed {
-            position: fixed;
-            top: 0;
-            width: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 20vh;
-            padding-top: 20px;
-            padding-bottom: 10px;
-            background: #fff;
-            border-right: 1px solid #eaeced;
-            z-index: 1;
-        }
-
-        .inbox__title {
-            display: flex;
-            justify-content: space-around;
-
-        }
-
-        .inbox__title-font {
-            font-weight: 400;
-            font-size: 2rem;
-        }
-
-        .inbox__icon {
-            height: 30px;
-            width: 30px;
-            border: 1px solid #9c9faa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 5px;
-        }
-
-        .inbox__icon--transformed {
-            font-size: 1rem;
-
-        }
-
-        .inbox__item {
-            height: 40px;
-            background: #f3f5f7;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 80%;
-            margin-left: 30px;
-            border-radius: 10px;
-        }
-
-        .inbox__item--general {
-            height: 34px;
-            width: 50%;
-            background: #ffffff;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 2px;
-        }
-
-        .inbox__item--total {
-            height: 34px;
-            width: 50%;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 2px;
-        }
-
-        .persons {
-            overflow-y: scroll;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            /* height: 100%; */
-            margin-top: 20vh;
-
-        }
-
-        .persons__panel {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 80%;
-            height: 89px;
-            border-radius: 15px;
-            margin-top: 10px;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        .persons__panel--grey {
-            background: #f3f5f7;
-        }
-
-        .persons__item {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        .persons__avatar {
-            height: 50px;
-            position: relative;
-        }
-
-        .persons__avatar-img {
-            height: 50px;
-            width: 50px;
-            border-radius: 15px;
-        }
-
-        .persons__info {
-            padding-left: 20px;
-        }
-
-        .persons__info-job {
-            color: #a8acb1;
-            font-size: .6rem;
-        }
-
-        .persons__info-hi {
-            font-size: 0.6rem;
-        }
-
-        .persons__mes--hiden {
-            visibility: hidden !important;
-        }
-
-        .persons__mes-font {
-            height: 25px;
-            width: 25px;
-            background: #4a6ada;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-        }
-
-        .persons__item--green {
-            font-size: 3rem;
-            position: absolute;
-            left: 36px;
-            top: 11px;
-            color: #59cd5d;
-            text-shadow: 0 0 4px #fff;
-        }
-
-        .chat {
-            width: calc(100% - 350px);
-            overflow-y: scroll;
-            background: linear-gradient(320deg, #f4f6f8, #fff);
-        }
-
-        .chat__individ {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            margin-top: 10px;
-            width: calc(100% - 600px);
-            border-bottom: 1px solid #ebeaef;
-            height: 100px;
-            position: fixed;
-            background: #fff;
-            margin: 0;
-
-        }
-
-        .chat__individ-person {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 130px;
-        }
-
-        .chat__individ-avatar {
-            /* height: 50px; */
-            width: 50px;
-            border-radius: 50%;
-        }
-
-        .chat__individ-left {
-            display: flex;
-            align-items: center;
-            width: 287px;
-            justify-content: space-around;
-        }
-
-        .chat__individ-search {
-            border-radius: 10px;
-            display: flex;
-            border: 1px solid #ebeaef;
-        }
-
-        .chat__individ-input {
-            /* height: 35px; */
-            border-radius: 10px 0 0 10px;
-            border: none;
-            background: #f3f5f7;
-        }
-
-        .chat__individ-glass {
-            width: 35px;
-            height: 35px;
-            background: #f3f5f7;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px 0 0 10px;
-            transform: rotateY(180deg);
-        }
-
-        .chat__individ-icon,
-        .sidepanel__icon {
-            width: 35px;
-            height: 35px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #ebeaef;
-            border-radius: 10px;
-            color: #868b95;
-        }
-
-        .sidepanel {
-            width: 50px;
-            border-left: 1px solid #eaeced;
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 30px;
-            padding-bottom: 30px
-        }
-
-        .sidepanel__icon--lower {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            height: 130px;
-        }
-
-        .chat__writefield {
-            position: fixed;
-            bottom: 0;
-            display: flex;
-            align-items: center;
-            width: calc(100% - 640px);
-            height: 100px;
-            justify-content: space-around;
-            margin: 0 20px 0 20px;
-            border-top: 1px solid #eaeaef;
-        }
-
-        .chat__input {
-            width: 70%;
-            height: 60%;
-            background: transparent;
-            border: none;
-        }
-
-        .chat__individ-icon--grey {
-            background: #e7e9ef;
-            color: #888f9a;
-        }
-
-        .chat__individ-icon--blue {
-            background: #4a6ada;
-            color: #fff;
-        }
-
-        .persons::-webkit-scrollbar,
-        .chat::-webkit-scrollbar,
-        html::-webkit-scrollbar {
-            display: none;
-        }
-
-        .chat__writefield-icon {
-            display: flex;
-            width: 124px;
-            justify-content: space-around;
-        }
-
-        .chat__message {
-            height: 90%;
-            margin: 105px 20px 0 20px;
-
-        }
-
-        .chat__date {
-            color: #898f98;
-            height: 50px;
-            display: flex;
-            align-items: center;
-        }
-
-        .chat__time {
-            font-size: .7rem;
-            color: #afb1b3;
-        }
-
-        .chat__right {
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .chat__letter {
-            width: 100px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .chat__letter-right {
-            margin-top: 10px;
-            margin-left: calc(100vw - 740px);
-            border-radius: 15px 15px 0 15px;
-            background: #fff;
-        }
-
-        .chat__letter-left {
-            background: #eceef0;
-            border-radius: 15px 15px 15px 0;
-            margin-top: 10px;
-        }
-
-        .chat__letter--long {
-            width: 200px;
-            margin-left: calc(100vw - 840px);
-        }
-
-        .chat__letter-left--long {
-            width: 200px;
-        }
-        .chat__file {
-            color: #5a6dab;
-            font-size: .7rem;
-        }
     </style>
 </head>
 
 <body>
-    <main class="wraper">
+    <main class="wrapper">
         <aside class="sidebar">
             <div class="logo">
+
                 <i class="las la-cube logo__icon"></i>
                 <h4 class="logo__text">Shark</h4>
+
             </div>
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <i class="las la-layer-group nav__icon"></i>
-                        <h6 class="nav__item-id">
-                            Dashboard
-                        </h6>
+                        <a href="" class="nav__link">
+                            <i class="las la-layer-group nav__icon"></i>
+                            <h6 class="nav__item-id">
+                                Dashboard
+                            </h6>
+                        </a>
 
                     </li>
                     <li class="nav__item">
-                        <i class="las la-chart-bar nav__icon"></i>
-                        <h6 class="nav__item-id">
-                            Statistic
-                        </h6>
+                        <a href="" class="nav__link">
+                            <i class="las la-chart-bar nav__icon"></i>
+                            <h6 class="nav__item-id">
+                                Statistic
+                            </h6>
+                        </a>
 
                     </li>
                     <li class="nav__item">
-                        <i class="las la-comment-alt nav__icon"></i>
-                        <h6 class="nav__item-id">
-                            Support
-                        </h6>
+                        <a href="" class="nav__link">
+                            <i class="las la-comment-alt nav__icon"></i>
+                            <h6 class="nav__item-id">
+                                Support
+                            </h6>
+                        </a>
+                    </li>
+                    <li class="nav__item nav__item--white">
+                        <a href="" class="nav__link">
+                            <i class="las la-clipboard nav__icon"></i>
+                            <h6 class="nav__item-id">
+                                Inbox
+                            </h6>
+                        </a>
 
                     </li>
                     <li class="nav__item">
-                        <i class="las la-clipboard nav__icon"></i>
-                        <h6 class="nav__item-id">
-                            Inbox
-                        </h6>
-
+                        <a href="" class="nav__link">
+                            <i class="las la-rocket nav__icon"></i>
+                            <h6 class="nav__item-id">
+                                Goals
+                            </h6>
+                        </a>
                     </li>
                     <li class="nav__item">
-                        <i class="las la-rocket nav__icon"></i>
-                        <h6 class="nav__item-id">
-                            Goals
-                        </h6>
-
-                    </li>
-                    <li class="nav__item">
-                        <i class="las la-link nav__icon"></i>
-                        <h6 class="nav__item-id">
-                            Links
-                        </h6>
+                        <a href="" class="nav__link">
+                            <i class="las la-link nav__icon"></i>
+                            <h6 class="nav__item-id">
+                                Links
+                            </h6>
+                        </a>
 
                     </li>
                 </ul>
@@ -658,7 +126,6 @@
             </div>
 
         </aside>
-
         <div class="inbox">
             <div class="inbox--fixed">
                 <div class="inbox__title">
@@ -678,7 +145,7 @@
                     <div class="persons__item">
                         <div class="persons__avatar">
                             <img src="https://via.placeholder.com/150" alt="" class="persons__avatar-img">
-                            <span class="persons__item--green">&bull;</span>
+                            <span class="online"></span>
                         </div>
                         <div class="persons__info">
                             <h5 class="persons__info-name">Michael.B</h5>
@@ -695,7 +162,7 @@
                     <div class="persons__item">
                         <div class="persons__avatar">
                             <img src="https://via.placeholder.com/150" alt="" class="persons__avatar-img">
-                            <span class="persons__item--green">&bull;</span>
+                            <span class="online"></span>
                         </div>
                         <div class="persons__info">
                             <h5 class="persons__info-name">Katie.W</h5>
@@ -712,7 +179,7 @@
                     <div class="persons__item">
                         <div class="persons__avatar">
                             <img src="https://via.placeholder.com/150" alt="" class="persons__avatar-img">
-                            <!-- <span class="persons__item--green">&bull;</span> -->
+                            <!-- <span class="online"></span> -->
                         </div>
                         <div class="persons__info">
                             <h5 class="persons__info-name">Arnold.J</h5>
@@ -729,7 +196,7 @@
                     <div class="persons__item">
                         <div class="persons__avatar">
                             <img src="https://via.placeholder.com/150" alt="" class="persons__avatar-img">
-                            <!-- <span class="persons__item--green">&bull;</span>  -->
+                            <!-- <span class="online"></span>  -->
                         </div>
                         <div class="persons__info">
                             <h5 class="persons__info-name">Fannie.K</h5>
@@ -746,7 +213,7 @@
                     <div class="persons__item">
                         <div class="persons__avatar">
                             <img src="https://via.placeholder.com/150" alt="" class="persons__avatar-img">
-                            <!-- <span class="persons__item--green">&bull;</span>  -->
+                            <!-- <span class="online"></span>  -->
                         </div>
                         <div class="persons__info">
                             <h5 class="persons__info-name">Isaac.A</h5>
@@ -763,7 +230,7 @@
                     <div class="persons__item">
                         <div class="persons__avatar">
                             <img src="https://via.placeholder.com/150" alt="" class="persons__avatar-img">
-                            <!-- <span class="persons__item--green">&bull;</span>  -->
+                            <!-- <span class="online"></span>  -->
                         </div>
                         <div class="persons__info">
                             <h5 class="persons__info-name">Jacob</h5>
@@ -780,7 +247,7 @@
                     <div class="persons__item">
                         <div class="persons__avatar">
                             <img src="https://via.placeholder.com/150" alt="" class="persons__avatar-img">
-                            <!-- <span class="persons__item--green">&bull;</span> -->
+                            <!-- <span class="online"></span> -->
                         </div>
                         <div class="persons__info">
                             <h5 class="persons__info-name">Liza.O</h5>
@@ -793,6 +260,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
         <div class="chat">
             <div class="chat__individ">
@@ -847,7 +315,7 @@
                     <i class="las la-microphone chat__individ-icon chat__individ-icon--grey"></i>
 
 
-                    <i class="las la-paper-plane chat__individ-icon chat__individ-icon--blue"></i>
+                    <i class="las la-paper-plane chat__individ-icon--blue"></i>
                 </div>
 
             </div>
