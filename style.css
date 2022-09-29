@@ -487,6 +487,10 @@
         width: 130px;
     }
 
+    .chat__id {
+        position: relative;
+    }
+
     .chat__individ-avatar {
         /* height: 50px; */
         width: 50px;
