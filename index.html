@@ -167,7 +167,7 @@
                         <div class="persons__info">
                             <h5 class="persons__info-name">Katie.W</h5>
                             <h6 class="persons__info-job">Middle designer</h6>
-                            <h6 class="persons__info-hi">Send you tomorrow...</h6>
+                            <h6 class="persons__info-hi">Send you tomorrow</h6>
                         </div>
                     </div>
                     <div class="persons__mes">
@@ -184,12 +184,12 @@
                         <div class="persons__info">
                             <h5 class="persons__info-name">Arnold.J</h5>
                             <h6 class="persons__info-job">UI designer</h6>
-                            <h6 class="persons__info-hi">Hi I chaked the layout agai...</h6>
+                            <h6 class="persons__info-hi">Hi I chaked the layout agai</h6>
                         </div>
                     </div>
-                    <div class="persons__mes--hiden">
+                    <!-- <div class="persons__mes--hiden">
                         <h5 class="persons__mes-font">2</h5>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="persons__panel">
@@ -204,9 +204,9 @@
                             <h6 class="persons__info-hi">okay!</h6>
                         </div>
                     </div>
-                    <div class="persons__mes--hiden">
+                    <!-- <div class="persons__mes--hiden">
                         <h5 class="persons__mes-font">2</h5>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="persons__panel">
@@ -218,12 +218,10 @@
                         <div class="persons__info">
                             <h5 class="persons__info-name">Isaac.A</h5>
                             <h6 class="persons__info-job">SMM manager</h6>
-                            <h6 class="persons__info-hi">I don't think we're going to finish...</h6>
+                            <h6 class="persons__info-hi">I don't think we're going to finish</h6>
                         </div>
                     </div>
-                    <div class="persons__mes--hiden">
-                        <h5 class="persons__mes-font">2</h5>
-                    </div>
+                    
                 </div>
 
                 <div class="persons__panel">
@@ -238,9 +236,9 @@
                             <h6 class="persons__info-hi">Sorry, Friend. I won't do it again!</h6>
                         </div>
                     </div>
-                    <div class="persons__mes--hiden">
+                    <!-- <div class="persons__mes--hiden">
                         <h5 class="persons__mes-font">2</h5>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="persons__panel">
@@ -255,9 +253,9 @@
                             <h6 class="persons__info-hi">Send you the file</h6>
                         </div>
                     </div>
-                    <div class="persons__mes--hiden">
+                    <!-- <div class="persons__mes--hiden">
                         <h5 class="persons__mes-font">2</h5>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -274,7 +272,7 @@
                 <div class="chat__individ-left">
                     <div class="chat__individ-search">
 
-                        <input type="text" class="chat__individ-input">
+                        <input type="text" class="chat__individ-input" placeholder="Search">
                         <i class="las la-search chat__individ-glass"></i>
 
                     </div>
@@ -284,15 +282,15 @@
             </div>
             <div class="chat__message">
                 <h5 class="chat__date">July 29,Tuesday</h5>
-                <h6 class="chat__time chat__right">12:25</h6>
+                <time class="chat__time chat__right">12:25</time>
                 <h5 class="chat__letter chat__letter-right">Hello!</h5>
                 <h5 class="chat__letter chat__letter-right chat__letter--long">How is your part of
                     project?</h5>
                 <h6 class="chat__time chat__right">viewed at</h6>
-                <h6 class="chat__time">12:28</h6>
+                <time class="chat__time">12:28</time>
                 <h5 class="chat__letter chat__letter-left">Hi!</h5>
                 <h5 class="chat__letter chat__letter-left chat__letter-left--long">Every thing is ok! It ready now!</h5>
-                <h6 class="chat__time chat__right">12:29</h6>
+                <time class="chat__time chat__right">12:29</time>
                 <h5 class="chat__letter chat__letter-right chat__letter--long">Okey, thank you for the speed.</h5>
                 <h6 class="chat__time chat__right">viewed at</h6>
                 <h5 class="chat__letter chat__letter-left">Catch</h5>
@@ -329,7 +327,14 @@
             </div>
         </div>
     </main>
-
+    <script>
+        function toggleMenu() {
+            var sidebar = document.querySelector('.sidebar');
+            var burger = document.querySelector('.burger');
+            sidebar.classList.toggle('sidebar--open');
+            burger.classList.toggle('burger--open');
+        }
+    </script>
 </body>
 
 </html>

@@ -134,7 +134,7 @@
     .nav__item {
         display: flex;
         align-items: center;
-        border-radius: 10px 0 0 10px;
+        border-radius: 10px 2px 2px 10px;
         height: calc(100% / 6);
     }
 
@@ -145,6 +145,7 @@
     .nav__item--white {
         background: white;
         color: #4c6bde;
+        border-right: 2px solid #fb663f;
     }
 
     .nav__link {
@@ -406,6 +407,7 @@
 
     .persons__info {
         padding-left: 20px;
+        width: 120px;
     }
 
     .persons__info-job {
@@ -415,6 +417,9 @@
 
     .persons__info-hi {
         font-size: 0.6rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .persons__mes--hiden {
@@ -466,12 +471,12 @@
         align-items: center;
         justify-content: space-between;
         margin-top: 10px;
-        width: calc(100% - 630px);
+        width: calc(100% - 600px);
         border-bottom: 1px solid #ebeaef;
-        height: 100px;
+        height: 70px;
         position: fixed;
         background: #fff;
-        margin: 0 15px 0 15px;
+        /* margin: 0 15px 0 15px; */
         padding: 0 20px 0 20px;
     }
 
@@ -506,6 +511,7 @@
         border-radius: 10px 0 0 10px;
         border: none;
         background: #f3f5f7;
+        padding-left: 15px;
     }
 
     .chat__individ-glass {
@@ -524,15 +530,16 @@
         bottom: 0;
         display: flex;
         align-items: center;
-        width: calc(100% - 640px);
-        height: 100px;
+        width: calc(100% - 600px);
+        height: 70px;
         justify-content: space-around;
-        margin: 0 20px 0 20px;
+        /* margin: 0 20px 0 20px; */
         border-top: 1px solid #eaeaef;
         list-style: none;
         color: inherit;
         border: none;
         text-decoration: inherit;
+        background: linear-gradient(301deg, #f4f6f8, white);
     }
 
     input:focus {
@@ -570,8 +577,8 @@
     }
 
     .chat__message {
-        height: 90%;
-        margin: 105px 20px 0 20px;
+        height: calc(100% - 70px);
+        margin: 70px 20px 70px 20px;
 
     }
 
@@ -645,7 +652,7 @@
         position: fixed;
         top: 0;
         right: 0;
-        /* height: 100vh; */
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -665,3 +672,5 @@
     .chat::-webkit-scrollbar {
         display: none;
     }
+
+    @media (max-width: 768px) {}
