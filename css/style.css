@@ -43,7 +43,6 @@
 
     .chat {
         grid-area: chat;
-        background: lightgray;
         overflow-y: scroll;
     }
 
@@ -206,19 +205,35 @@
     }
 
     .project__item--oranje {
-        border: 2px solid #c77b67;
+        border: 2px solid #ca6a51;
+    }
+
+    .project__item--oranje:hover {
+        background: #e8c2b8;
     }
 
     .project__item--blue {
         border: 2px solid #6284bb;
     }
 
+    .project__item--blue:hover {
+        background: #9bb5df;
+    }
+
     .project__item--purple {
         border: 2px solid #7356c2;
     }
 
+    .project__item--purple:hover {
+        background: #a897d7;
+    }
+
     .project__item--green {
         border: 2px solid #a4c9b5;
+    }
+
+    .project__item--green:hover {
+        background: #cff1df;
     }
 
     .project__item-name {
@@ -261,6 +276,10 @@
         background: #f3f5f7;
     }
 
+    .button__item:hover {
+        background: #4a6ada;
+    }
+
     /* 
     d8b          888                        
     Y8P          888                        
@@ -271,6 +290,19 @@
     888 888  888 888 d88P Y88..88P .d8""8b. 
     888 888  888 88888P"   "Y88P"  888  888        
     */
+    .inbox__menu-button {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ebeaef;
+        border-radius: 10px;
+        color: #868b95;
+        display: none;
+        transition: background 0.6s;
+    }
+
     .inbox {
         display: flex;
         flex-direction: column;
@@ -352,6 +384,10 @@
         justify-content: center;
         align-items: center;
         margin: 2px;
+    }
+
+    .inbox__item--total:hover {
+        background: #fff;
     }
 
     /*                                                   
@@ -491,6 +527,18 @@
         position: relative;
     }
 
+    .chat__individ-btm {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ebeaef;
+        border-radius: 10px;
+        color: #868b95;
+        display: none;
+    }
+
     .chat__individ-avatar {
         /* height: 50px; */
         width: 50px;
@@ -574,6 +622,11 @@
         border-radius: 10px;
     }
 
+    .chat__individ-icon:hover {
+        background: #4a6ada;
+        color: #fff;
+    }
+
     .chat__writefield-icon {
         display: flex;
         width: 124px;
@@ -650,6 +703,21 @@
         color: #868b95;
     }
 
+    /* 
+             d8b      888                                              888 
+             Y8P      888                                              888 
+                      888                                              888 
+    .d8888b  888  .d88888  .d88b.  88888b.   8888b.  88888b.   .d88b.  888 
+    88K      888 d88" 888 d8P  Y8b 888 "88b     "88b 888 "88b d8P  Y8b 888 
+    "Y8888b. 888 888  888 88888888 888  888 .d888888 888  888 88888888 888 
+         X88 888 Y88b 888 Y8b.     888 d88P 888  888 888  888 Y8b.     888 
+     88888P' 888  "Y88888  "Y8888  88888P"  "Y888888 888  888  "Y8888  888 
+                                   888                                     
+                                   888                                     
+                                   888                                     
+
+    */
+
     .sidepanel {
         width: 50px;
         border-left: 1px solid #eaeced;
@@ -665,6 +733,11 @@
         padding-bottom: 30px
     }
 
+    .sidepanel__icon:hover {
+        background: #4a6ada;
+        color: #fff;
+    }
+
     .sidepanel__icon--lower {
         display: flex;
         flex-direction: column;
@@ -676,5 +749,3 @@
     .chat::-webkit-scrollbar {
         display: none;
     }
-
-    @media (max-width: 768px) {}
